@@ -22,7 +22,16 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      // JavaScript to be fired on all pages
+      var $container = $('.main').masonry();
+      // layout Masonry again after all images have loaded
+      $container.imagesLoaded( function() {
+        $container.masonry({
+            itemSelector: '.post',
+            columnWidth: container.querySelector('.col-sm-3'),
+            gutter: 0,
+            containerStyle: null
+        });
+      });
     }
   },
   // Home page
