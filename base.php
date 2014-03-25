@@ -17,11 +17,13 @@
     }
   ?>
 
-  <div class="wrap container-fluid" role="document">
+  <div id="" class="wrap container-fluid" role="document">
     <div class="content row">
       <?php get_template_part('templates/page', 'header'); ?>
       <main class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
+        <?php if (!is_single()) { ?><div class="main-inner"><?php } ?>
+          <?php include roots_template_path(); ?>
+        <?php if (!is_single()) { ?></div><?php } ?>
       </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">

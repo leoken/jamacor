@@ -22,13 +22,13 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      var $container = $('.main').masonry();
+      var $container = $('.main-inner').masonry();
       // layout Masonry again after all images have loaded
       $container.imagesLoaded( function() {
         $container.masonry({
             itemSelector: '.post',
-            columnWidth: container.querySelector('.col-sm-3'),
-            gutter: 0,
+            columnWidth: container.querySelector('.col-sm-4'),
+            gutter: 30,
             containerStyle: null
         });
       });
