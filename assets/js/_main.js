@@ -24,7 +24,7 @@ var Roots = {
     init: function() {
       var $container = $('.main-inner').masonry();
       // layout Masonry again after all images have loaded
-      // $container.imagesLoaded( function() {
+      $container.imagesLoaded( function() {
         $container.masonry({
             itemSelector: '.post',
             //columnWidth: '.post',
@@ -32,7 +32,7 @@ var Roots = {
             gutter: 15,
             containerStyle: null
         });
-      // });
+      });
     }
   },
   // Home page
