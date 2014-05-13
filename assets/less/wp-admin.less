@@ -1,0 +1,71 @@
+@import "bootstrap/variables.less";
+
+a {
+	color: @link-color;
+	&:hover {
+		color: darken(@link-color, 25%);
+	}
+}
+
+.wp-submenu {
+	a {
+		color: #fff!important;
+		&:hover {
+			color: #fff!important;
+		}
+	}
+}
+
+.wrap .add-new-h2 {
+	&:hover {
+		background: darken(@link-color, 15%);
+	}
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after {
+
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.open-sub:hover:after {
+	border-right-color: darken(@link-color, 75%);
+}
+
+#adminmenu li:hover div.wp-menu-image:before {
+	color: darken(@link-color, 75%);
+}
+
+#adminmenuback, #adminmenuwrap, #adminmenu {
+	background: #000;
+}
+
+#wpadminbar {
+	background: #000;
+}
+
+#adminmenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+	background: darken(@link-color, 15%);
+}
+
+#adminmenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+background: darken(@link-color, 15%);
+}
+
+
+#adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head, .folded #adminmenu li.current.menu-top {
+color: #fff;
+background: darken(@link-color, 15%);
+}
+
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu .wp-has-current-submenu .wp-submenu a:focus, #adminmenu .wp-has-current-submenu .wp-submenu a:hover, .folded #adminmenu .wp-has-current-submenu .wp-submenu a:focus, .folded #adminmenu .wp-has-current-submenu .wp-submenu a:hover, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu a:focus, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu a:hover, #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:focus, #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:hover {
+color: darken(@link-color, 15%);
+}
+
+#adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+color: #fff;
+background-color: darken(@link-color, 15%);
+}
+
+#wpadminbar .ab-top-menu>li:hover>.ab-item, #wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar .ab-top-menu>li>.ab-item:focus, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar-nojs .ab-top-menu>li.menupop:hover>.ab-item, #wpadminbar .ab-top-menu>li.menupop.hover>.ab-item {
+color: #fff;
+background: darken(@link-color, 15%);
+}

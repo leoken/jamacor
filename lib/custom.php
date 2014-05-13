@@ -1,5 +1,7 @@
 <?php
 
+require_once locate_template('/lib/admin-theme.php'); 
+
 function jamacor_latest_video() {
   $videoid = get_field('video_id');
 ?>
