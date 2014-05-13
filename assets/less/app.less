@@ -32,7 +32,7 @@ body { }
 .page-header {
    display: block;
    position: relative;
-   margin-bottom: 30px;
+   margin-bottom: 0;
    margin-top: 0;
    padding-bottom: 0;
    h1 {
@@ -79,7 +79,7 @@ body.home article.post.category-hip-hop, body.archive article.post.category-hip-
 body.home article.post.category-cars, body.archive article.post.category-cars {width: 100%;margin-right: 0%;}
 body.home article.post.category-graffiti, body.archive article.post.category-graffiti {width: 100%;margin-right: 0%;}
 body.home article.post.category-skate, body.archive article.post.category-skate {width: 100%;margin-right: 0%;}
-// body.home article.post.category-featured {width: 100%;margin-right: 0;}
+body.home article.post.category-featured {width: 100%;margin-right: 0;}
 
 .gutter { width: 15px; }
 
@@ -98,6 +98,14 @@ body.home article.post.category-skate, body.archive article.post.category-skate 
       overflow: hidden;
       margin-bottom: 1%;
       border: 7px solid #000;
+      .transition(0.5s 0 all ease);
+      .meta-wrap {
+         
+         margin-left: 15px;
+         margin-bottom: -30px;
+         position: relative;
+         .transition(0.5s 0 all ease);
+      }
       .thumbnail {
          padding: 0;
          border: 0;
@@ -109,6 +117,7 @@ body.home article.post.category-skate, body.archive article.post.category-skate 
          margin-left: 0;
          margin-right: 0;
          width: 100%;
+         .transition(0.5s 0 all ease);
          h2 {
             margin-left: 15px;
             margin-top: 12px;
@@ -127,30 +136,40 @@ body.home article.post.category-skate, body.archive article.post.category-skate 
          .byline {
             display: inline;
          }
-      }
-   }
-}
-
-.main {
-   article {
-      .meta-wrap {
-         display: none;
-         margin-left: 15px;
+         .categories {
+            display: inline;
+         }
       }
       &:hover {
+         .transition(0.5s 0 all ease);
+         border: 7px solid @brand-primary;
          .meta-wrap {
             display: block;
-            position: relative;
-            bottom: 0;
+            margin-bottom: 10px;
+            .transition(0.5s 0 all ease);
          }
          header {
-            bottom: 30px;
+            bottom: 15px;
+            .transition(0.5s 0 all ease);
          }
       }
-
+   }
+   #featured {
+      article {
+         header {
+            position: relative;
+            top: 0;
+            h2 {
+               margin-left: 0;
+            }
+         }
+      .entry-summary {
+         color: @gray-lighter;
+         margin-top: 15px;
+         }
+      }
    }
 }
-
 
 
 body.single .main {
@@ -158,14 +177,6 @@ body.single .main {
       header {
          position: relative;
          background-color: transparent;
-      }
-   }
-}
-
-body.home {
-   .main {
-      article {
-
       }
    }
 }
@@ -349,6 +360,7 @@ body.single article {
    body.home article.post.category-cars, body.archive article.post.category-cars {width: 49%;margin-right: 1%;}
    body.home article.post.category-graffiti, body.archive article.post.category-graffiti {width: 49%;margin-right: 1%;}
    body.home article.post.category-skate, body.archive article.post.category-skate {width: 49%;margin-right: 1%;}
+   body.home article.post.category-featured, body.archive article.post.category-featured {width: 100%;margin-right: 1%;}
 }
 
 @media (min-width: @screen-md-min) {
@@ -356,6 +368,7 @@ body.single article {
    body.home article.post.category-cars, body.archive article.post.category-cars {width: 32%;margin-right: 1.3%;}
    body.home article.post.category-graffiti, body.archive article.post.category-graffiti {width: 32%;margin-right: 1.3%;}
    body.home article.post.category-skate, body.archive article.post.category-skate {width: 32%;margin-right: 1.3%;}
+   body.home article.post.category-featured, body.archive article.post.category-featured {width: 100%;margin-right: 1.3%;}
 }
 
 @media (min-width: @screen-lg-min) {
@@ -363,4 +376,5 @@ body.single article {
    body.home article.post.category-cars, body.archive article.post.category-cars {width: 32%;margin-right: 1.3%;}
    body.home article.post.category-graffiti, body.archive article.post.category-graffiti {width: 32%;margin-right: 1.3%;}
    body.home article.post.category-skate, body.archive article.post.category-skate {width: 32%;margin-right: 1.3%;}
+   body.home article.post.category-featured, body.archive article.post.category-featured {width: 100%;margin-right: 1.3%;}
 }
