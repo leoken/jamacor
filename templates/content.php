@@ -15,7 +15,7 @@ $classes = array(
 				<a href="<?php the_permalink(); ?>" class="">
 				<?php 
 				if ( has_post_thumbnail() ) {
-				  the_post_thumbnail('medium', array('class' => ''));
+				  the_post_thumbnail('medium', array('class' => 'img-responsive'));
 				} 
 				?>
 				</a>

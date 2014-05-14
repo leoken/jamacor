@@ -1,29 +1,31 @@
+<?php if (!have_posts()) : ?>
+  <div class="alert alert-warning">
+    <?php _e('Sorry, no results were found.', 'roots'); ?>
+  </div>
+  <?php get_search_form(); ?>
+<?php endif; ?>
+
 <?php
 $featured = new WP_Query(array(
 'category_name' => 'featured',
 'posts_per_page' => 1
-));
-
-while ( $featured->have_posts() ) : $featured -> the_post(); 
-$do_not_duplicate = get_the_ID(); ?>
-<div id="featured" class="row">
-<?php get_template_part('templates/content', 'featured'); ?>
-</div><!-- end #featured -->
-<?php 
-endwhile;
-
-wp_reset_postdata();?>
+)); ?>
+<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?> 
+	<?php $do_not_duplicate = get_the_ID(); ?>
+	<div id="featured" class="row">
+		<?php get_template_part('templates/content', 'featured'); ?>
+	</div><!-- end #featured -->
+<?php endwhile; ?>
+<?php wp_reset_postdata();?>
 
 <div id="main-posts" class="row">
-<?php if (!is_single()) { ?><div class="main-inner"><?php } ?>
-<?php if(have_posts()) : while (have_posts()) : the_post();
-if ($post->ID == $do_not_duplicate) continue;
-?>
-	<?php get_template_part('templates/content', get_post_format()); ?>
-<?php 
-endwhile;
-endif;?>
-<?php if (!is_single()) { ?></div><?php } ?>
+	<?php if (!is_single()) { ?><div class="main-inner"><?php } ?>
+		<?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if ($post->ID == $do_not_duplicate) continue; ?>
+			<?php get_template_part('templates/content', get_post_format()); ?>
+		<?php endwhile; ?>
+		<?php endif;?>
+	<?php if (!is_single()) { ?></div><?php } ?>
 </div><!-- end .row -->
 
 <?php
